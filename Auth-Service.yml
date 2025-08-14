@@ -1,11 +1,21 @@
 spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
   datasource:
     url: jdbc:mysql://localhost:3306/amazon
-    username: root 
+    username: root
     password: Hareesha@190164
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: update
-    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 server:
   port: 8081
